@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Musix Landing Page</title>
+  <link rel="icon" href="https://yt3.googleusercontent.com/qV8yIdKnLvF6fYgOvz_KzpOUf1jmgAZydtNevST4c2ARDqhDBBp46HotXTDaBcKkBo9PkzhlMpM=s900-c-k-c0x00ffffff-no-rj" type="image/x-icon" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Musix</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+        <li><a href="#login" id="login-link">Login</a></li>
+      </ul>
+    </nav>
+
+    <div id="login" class="login">
+      <form class="login-form">
+        <h2>Login</h2>
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" name="login-email" required />
+        <label for="login-name">Name</label>
+        <input type="text" id="login-name" name="login-name" required />
+        <button type="submit">Login</button>
+        <button type="button" id="close-login" class="close-btn">&times;</button>
+      </form>
+    </div>
+
+    <div class="hero">
+      <h1>Feel the Beat</h1>
+      <p>Discover new music, connect with artists, and stream your favorite tracks anytime, anywhere.</p>
+      <a href="#subscribe" class="cta-button">Get Started</a>
+    </div>
+  </header>
+
+  <section id="features" class="features-section">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Unlimited Streaming</h3>
+        <p>Access millions of songs and playlists without limits.</p>
+      </div>
+      <div class="feature">
+        <h3>Personalized Playlists</h3>
+        <p>Get recommendations tailored to your taste.</p>
+      </div>
+      <div class="feature">
+        <h3>Connect with Artists</h3>
+        <p>Follow your favorite artists and never miss an update.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="artists" class="artists">
+    <h2>Featured Artists</h2>
+    <div class="artist-list">
+      <div class="artist-card">
+        <img src="https://images.filmibeat.com/ph-big/2024/10/anirudh-ravichander-birthday-special-unknown-facts-about-the-music-director1729052900_1.jpg" alt="Anirudh Ravichander" loading="lazy" />
+        <p>Anirudh Ravichander</p>
+      </div>
+      <div class="artist-card">
+        <img src="https://songsall.com/wp-content/uploads/2024/08/Untitled-design-6.png" alt="AR Rahman" loading="lazy" />
+        <p>AR Rahman</p>
+      </div>
+      <div class="artist-card">
+        <img src="https://bookingagentinfo.com/wp-content/uploads/2024/07/ab6761610000e5eb42389d59e94635ebcbda35dd-1.jpg" alt="Hiphop Tamizha" loading="lazy" />
+        <p>Hiphop Tamizha</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="subscribe" class="subscribe">
+    <h2>Join Musix Today</h2>
+    <form action="#" method="POST">
+      <label for="email" class="visually-hidden">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>All rights reserved © Musix 2025</p>
+  </footer>
+
+  <script>
+    const loginModal = document.getElementById('login');
+    document.getElementById('login-link').onclick = (e) => {
+      e.preventDefault();
+      loginModal.style.display = 'flex';
+    };
+    document.getElementById('close-login').onclick = () => {
+      loginModal.style.display = 'none';
+    };
+    loginModal.onclick = (e) => {
+      if (e.target === loginModal) loginModal.style.display = 'none';
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") loginModal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
